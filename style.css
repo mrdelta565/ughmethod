@@ -92,6 +92,11 @@ header {
     text-align: center;
 }
 
+#benefits h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -135,27 +140,62 @@ header {
     background: #f9f9f9;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem;
+    color: #333;
+}
+
+.product-category {
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+}
+
+.category-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: #444;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.category-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #4CAF50;
+}
+
 .pricing-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
-    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .pricing-card {
-    padding: 0;
-    border: none;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
     background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
 }
 
 .pricing-card-cover {
@@ -167,53 +207,47 @@ header {
 
 .pricing-card-content {
     padding: 2rem;
+    text-align: center;
 }
 
 .pricing-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+    margin-bottom: 1rem;
 }
 
 .price {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 1rem 0;
-    color: #000;
-    font-family: 'Arial', sans-serif;
 }
 
 .price-subtitle {
-    color: #666;
-    font-size: 0.9rem;
     margin-bottom: 1.5rem;
+    color: #666;
 }
 
 .pricing-card ul {
     list-style: none;
+    padding: 0;
     margin: 1.5rem 0;
-    padding: 0 1rem;
+    text-align: left;
 }
 
 .pricing-card li {
-    margin: 1rem 0;
-    color: #444;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
 }
 
 .pricing-card li:before {
     content: "✓";
-    color: #00c853;
-    margin-right: 8px;
-    font-weight: bold;
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
 }
 
 .buy-button {
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     background: #000;
     color: white;
     text-decoration: none;
@@ -223,7 +257,11 @@ header {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
 .buy-button:hover {
@@ -333,7 +371,7 @@ footer {
     }
     
     .pricing-card-cover {
-        height: 313px;
+        height: 425px;
     }
     
     .price {
@@ -365,7 +403,7 @@ footer {
     }
     
     .pricing-card-cover {
-        height: 313px;
+        height: 425px;
     }
     
     .pricing-card-content {
