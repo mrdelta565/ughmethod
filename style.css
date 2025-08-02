@@ -205,6 +205,13 @@ header {
     background-position: center;
 }
 
+.pricing-card-cover-msc{
+    width: 100%;
+    height: 385px;
+    background-size: cover;
+    background-position: center;
+}
+
 .pricing-card-content {
     padding: 2rem;
     text-align: center;
